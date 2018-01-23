@@ -65,12 +65,13 @@ foreach ($ids as $id) {
   $zona = $zona['content'];
 
   if ($zona == 0) {
-    echo "Zona cero cambiada a la letra 'O'!<br>";
 
     $data = $db->update("values", [ "content" => "O" ], [
       "item_id" => $id,
       "field_id" => 10
     ]);
+
+    echo "id:$id Zona cero cambiada a la letra 'O'!<br>";
 
   } else {
 
